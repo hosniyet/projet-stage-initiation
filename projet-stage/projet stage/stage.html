@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fiche d'inscription au stage</title>
+    <link rel="icon" href="biat.png" type="png">
+    <link rel="stylesheet" type="text/css" href="stage.css">
+    <script language="javascript" src="controle.js" ></script>
+</head>
+<body>
+</body>
+   
+    <a href="https://www.biat.com.tn/ "><div class="preimg">
+      <pre>Siège de la 
+        Banque Internationale Arabe de Tunisie 
+            </pre>
+    </pre></a>
+    
+    <a href="https://www.biat.com.tn/"><img src="biat.png" title="site de centre national d'informatique"></a>
+    
+   <div class="container"> 
+    <h1>Fiche d'inscription au stage</h1>
+    <form name="f" method="post" action="inscri.php">
+       <div class="user-details"> 
+         <div class="input-box">
+           <span class="details">Nom et Prenom</span>
+           <input class="inp" type="text" name="nom" placeholder="donner votre nom et prenom" required >
+         </div>
+         <div class="input-box">
+            <span class="details">Carte d'indentité   </span>
+            <input class="inp" type="text" name="cin" placeholder="donner votre numéro d'identité" required >
+          </div>
+          <div class="input-box">
+            <span class="details">Date de naissance</span>
+            <input class="inp"  type="date" name="date" placeholder="" >
+          </div>
+          <div class="input-box">
+            <span class="details">Lieu de naissance</span>
+            <input class="inp" type="text" name="lieu" placeholder="donner votre Lieu de naissance" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Adresse</span>
+            <input class="inp" type="text" name="add" placeholder="donner votre adresse" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Niveau d'étude</span>
+            <input class="inp"type="text" name="niv" placeholder="donner votre Niveau d'étude"required >
+          </div>
+          <div class="input-box">
+            <span class="details">Tél</span>
+            <input class="inp" type="tel" name="tel" placeholder="donner votre numéro de tel+216" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Etablissement</span>
+            <input class="inp" type="text" name="etab" placeholder="donner votre Etablissement" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Organisme d'accueil</span>
+            <input class="inp"  type="text" name="organ" placeholder="donner l'organisme d'accueil"required >
+          </div>
+          <div class="input-box">
+            <span class="details">type de stage</span>
+            <select name="type">
+                <option id="ts" selected>donner le type de stage</option>
+                <option value="ini">Stage d'iver(linitiation)</option>
+                <option value="ete">Stage d'été(optionnel)</option>
+                <option value="pfe">Stage PFE</option>
+                <option value="m1">Stage M1(obliqatoire)</option>
+                <option value="m2">Stage mémoire M2</option>
+                <option value="ead">Stage spécifique(retardatoire)</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Sujet de stage</span>
+               <textarea name="sujet" rows=5 cols=40  placeholder="donner le sujet de stage">
+               </textarea>
+          </div>
+  
+         <div class="input-box">
+          <span class="details">péride de Stage</span>
+          <input class="inp" type="date" name="per1" required >
+          <input id="relative" class="inp" type="date" name="per2"  required>
+
+        </div>
+        <div class="input-box">
+          <span class="details">Stage payé <strong>?</strong></span>
+          <div class="oui-non">
+            <label for="">
+              <input type="radio" name="c1" value="oui" >
+              <span class="jeweb" >Oui</span>
+            </label>
+            <label for="">
+              <input type="radio" name="c1" value="non">
+              <span class="jeweb">non</span>
+            </label>
+          </div>      
+        </div>
+        <div class="input-box" id="montant">
+          <span class="details">Montant de prime en cas de stage payé(DT) </span>
+          <input class="inp"  type="number" name="montant" max="700" min="150" step="10">
+        </div>
+        <div class="input-box">
+           <input type="submit" value="Envoyer" id="buttom" onclick="return verif()"/>
+        </div>
+
+    </div>
+    </form>
+   </div>
+</body>
+</html>
